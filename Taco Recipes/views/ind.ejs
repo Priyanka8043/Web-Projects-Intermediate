@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Taco Recipes</title>
+  <link rel="stylesheet" type="text/css" href="/styles/main.css">
+</head>
+
+<body>
+  <h1>Taco Town 🌮</h1>
+
+
+  <form action="/recipe" method="POST" class="buttons
+  ">
+    <button type="submit" value="chicken" name="choice">🍗</button>    <!--button type is submit so on clicking action takes place-->
+    <button type="submit" value="beef" name="choice">🥩</button>
+    <button type="submit" value="fish" name="choice">🐟</button>
+  </form>
+
+  <div id="recipeContainer" class="hidden">
+    <%if (locals.recipe) {%>  <!--recipe defined in solution.js has data, so if locals.recipe exists-->
+
+      <h2 id="recipeTitle">
+        <%= recipe.name %>      <!--in h2 we will get recipe's name depending on choice-->
+      </h2>
+
+      <h3>Ingredients:</h3>
+
+      <ul id="ingredientsList">
+        <li>
+          <%= recipe.ingredients.protein.name %>, <%= recipe.ingredients.protein.preparation %>
+        </li> <!--this info is extracted using hierarchy in recipe.json file-->
+        <li>
+          <%= recipe.ingredients.salsa.name %>
+
+        </li>
+        <% recipe.ingredients.toppings.forEach(topping=> { %>
+          <li>
+            <%= topping.quantity %> of <%= topping.name %>
+          </li>
+          <% }) %>
+      </ul>
+
+      <%} else {%>
+        <h2>Pick your favourite taco ingredient 👆</h2>
+        <%}%>
+  </div>
+</body>
+
+</html>
+
+
+<!-- if we click on "/" data gets send to solution.ejs
+
+  if we do a choice and click on one of the buttons--data gets stored in var data about that particular choice.
+  this data is redirected to "/" and stored in var recipe.
+
+  if locals.recipe exist then using recipe.name etc we can extract data from json about that particular choice.
+  else if no choice is made yet we can display to pick taco ingredient.
+
+
+-->

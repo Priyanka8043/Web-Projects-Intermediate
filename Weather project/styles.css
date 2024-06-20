@@ -1,0 +1,139 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins',sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(235, 222, 208);
+}
+
+.container{
+   
+    width: 100%;
+    height: 100vh;
+    /* max-width: 470px; */
+    background: linear-gradient(  #0f2027, #203a43, #2c5364);
+    color: white;
+    /* margin: 100px auto 0; */
+    /* border-radius: 20px; */
+    padding: 40px 35px;
+    text-align: center;
+
+
+}
+
+.search{
+   width: 60%;
+   display: flex;;
+   align-items: center;
+   justify-content: space-between;  /*so that input and button are side to side*/
+   padding-top: 60px;
+   margin-left: 380px;
+}
+
+
+.search input{
+    border: 0;
+    outline: 0;
+    background-color: #ebfffc;
+    color: #555;
+    padding: 10px 25px;
+    height: 40px;
+    border-radius: 30px;
+    flex: 1;
+    margin-right: 18px;
+    font-size: 18px;
+
+}
+
+.search button{
+    border: 0;
+    outline: 0;
+    background-color: #ebfffc;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    
+}
+
+.search button span{
+    width: 16px;
+}
+
+.weather-icon{
+    width: 170px;
+    margin-top: 30px;
+
+}
+
+.weather h1{
+    font-size: 80px;
+    font-weight: 500;
+    
+}
+.weather h2{
+    font-size: 45px;
+    font-weight: 400;
+    margin-top: 10px;
+    color:rgb(231, 231, 194);
+ }
+
+.bottom{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 100px;
+    margin-left: 150px;
+    margin-right: 100px;
+    padding: 0 20px;
+} 
+
+.col{
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+
+.col img{
+    width:90px;
+    margin-right:10px;
+
+}
+
+.humidity, .wind{
+    font-size: 28px;
+    margin-top: -6px;
+    
+
+}
+
+.para{
+    margin-left: 10px;
+    color: rgb(235, 208, 176);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* https://uigradients.com/#MoonlitAsteroid--->for gradient colors */
+/* 
+If you use flex:1 inside flex container then all flex items will occupy same space.
+
+If you use flex:1 inside specific flex item then that flex item will occupy remaining space. */

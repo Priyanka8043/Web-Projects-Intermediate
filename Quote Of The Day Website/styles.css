@@ -1,0 +1,110 @@
+/*google fonts-->select playfair-->select diff fonts-->import and p[aste link here and font family in required part.*/
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,400&display=swap');
+
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Playfair Display', serif;
+}
+
+body{
+    
+    background-image: url(/pattern.png);  /*from pattern.monster-->png*/
+}
+
+.quotebox{
+    background-color: rgb(161, 243, 114);
+    width: 700px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);  /*translate: x-axis y-axis z-axis*/
+    padding: 40px;
+    border-radius: 15px;
+    text-align:center ;
+    box-shadow:20px 20px rgb(159, 255, 159); /*box-shadow: none|h-offset v-offset blur spread color*/
+}
+
+.quotebox h2{
+
+    margin-bottom: 20px;
+    font-size: 50px;
+    position: relative;
+}
+
+hr{
+    position: relative;
+    left: 250px;
+    width: 100px;
+    color: rgb(67, 17, 114);
+    height: 5px;
+    background-color: rgb(43, 196, 127);
+    margin-bottom: 30px;
+}
+
+.quotebox blockquote{
+    font-size: 30px;
+    min-height: 200px;  /*The min-height property defines the minimum height of an element. If the content is smaller than the minimum height, the minimum height will be applied. If the content is larger than the minimum height, the min-height property has no effect.*/
+
+}
+
+.quotebox blockquote::before, .quotebox blockquote::after{
+    content: '"';
+}/*blockquote cha before and after "" yenya sathi*/
+
+
+.quotebox span{
+    display: block;  /*purna row chi space ghenar s a block element*/
+    margin-top: 10px;
+    float: right;
+    position: relative;
+    
+
+}
+
+.quotebox span::before{
+    content: "-";
+
+}
+
+.quotebox div{
+    width: 100%;
+    margin-top:70px ;
+    display: flex;
+    justify-content: center; /*horizontally*/
+    
+}
+
+button{
+
+    width: 150px;
+    height: 45px;
+    margin-right: 30px;
+    border-radius: 20px;
+    background-color: rgb(211, 167, 252);
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+}
+
+button:hover{
+    background-color: rgb(118, 67, 166);
+}
+
+img{
+    width: 30px;
+    margin-right: 5px;
+    
+}
+
+
+/* .quotebox button:nth-child(2){
+    background: transparent;
+} */
+
+
